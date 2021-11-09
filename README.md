@@ -38,5 +38,19 @@ Access the gRPC service directly using the grpcurl
 
 ```
 grpcurl --plaintext -d '{"name": "Sash", "dept": "Management", "age": "25"}' localhost:9000 helloworld.Greeter/SayHello
+```
 
+## Running in Native
 
+Compile the application into a native binary
+
+```
+mvn clean install -Pnative
+```
+
+Run
+
+```
+./target/grpc-plain-text-sash-1.0.0-SNAPSHOT-runner
+
+```
