@@ -21,9 +21,20 @@ mvn quarkus:dev
 
 ## Verify the Application
 
+when we hit the below REST endpoint, the REST resource will invoke the gRPC using Quarkus gRPC client lib. Its Like GrpcClient --> gRPC API
+
 ```
 curl localhost:8080/sash/blocking/Moses
+
+or
 
 curl localhost:8080/sash/mutiny/Sashvin
 
 ```
+
+Access the gRPC service directly using the grpcurl
+
+```
+grpcurl --plaintext -d '{"name": "Sash", "dept": "Management", "age": "25"}' localhost:9000 helloworld.Greeter/SayHello
+
+
