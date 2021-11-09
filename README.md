@@ -26,8 +26,10 @@ when we hit the below REST endpoint, the REST resource will invoke the gRPC usin
 ```
 curl localhost:8080/sash/blocking/Moses
 
+```
 or
 
+```
 curl localhost:8080/sash/mutiny/Sashvin
 
 ```
